@@ -19,7 +19,9 @@ jobs:
       run: cd $GITHUB_WORKSPACE
     - name: Test with pytest
       run: |
-        python -m unittest csv_reader_test.py
+        python -m unittest src/csv_reader_test.py
+    - run: pip install tox
+    - run: tox -e py
     - name: Sonar Cloud
       uses: SonarSource/sonarcloud-github-action@master
       env:
