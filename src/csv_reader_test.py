@@ -16,7 +16,7 @@ class CSVPrinter:
 
 class TestCSVPrinter(unittest.TestCase):
     def test_read(self):
-        printer = CSVPrinter(os.path.join(os.getcwd(), "sample.csv"))
+        printer = CSVPrinter(os.path.join(os.getcwd(), "src/sample.csv"))
         l = printer.read()
         self.assertEqual(3, len(l))
 
