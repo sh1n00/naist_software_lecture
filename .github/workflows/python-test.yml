@@ -22,6 +22,7 @@ jobs:
         python -m unittest src/csv_reader_test.py
     - run: pip install tox
     - run: tox -e py
+    - run: ls
     - name: Sonar Cloud
       uses: SonarSource/sonarcloud-github-action@master
       env:
